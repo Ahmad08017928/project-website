@@ -1,0 +1,422 @@
+## Dokumentasi Proyek Website Portofolio ##
+
+### Deskripsi Proyek
+Proyek ini merupakan sebuah website portofolio sederhana yang dibuat oleh Kelompok 6 sebagai bagian dari tugas sekolah. Website ini memuat informasi tentang kelompok, anggota kelompok, dan fitur kontak.
+
+### Struktur Proyek
+Proyek ini terdiri dari beberapa file utama:
+1. `index.php` - File ini berisi kode HTML untuk tampilan depan website.
+2. `kirim.php` - File ini berisi kode PHP yang digunakan untuk mengirim email melalui fitur kontak.
+3. `style.css` - File ini berisi kode CSS untuk mengatur tampilan website.
+4. `Asset` - Folder ini berisi gambar-gambar yang digunakan dalam website.
+
+### Fitur Website
+1. **About Me**: Bagian ini menjelaskan tentang jurusan PPLG (Pengembangan Perangkat Lunak dan Gim).
+2. **Anggota**: Bagian ini menampilkan daftar anggota Kelompok 6 beserta foto dan nama mereka.
+3. **Contact**: Bagian ini menyediakan form untuk mengirim pesan email.
+
+### Detail Kode
+
+#### Kode Tampilan (Frontend)
+File: `index.php`
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student | Program</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .jumbotron {
+      padding-top: 2rem;
+      text-align: center;
+      background-color: #e2edff;
+    }
+    .img-thumbnail {
+      display: block;
+      margin: 10px auto;
+    }
+    #Anggota {
+      background-color: #e2edff;
+    }
+  </style>
+</head>
+<body id="home">
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Kelompok 6</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Anggota">Anggota</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="jumbotron text-center">
+    <img src="Asset/Logo.jpeg" alt="Logo" width="100" class="rounded-circle img-thumbnail">
+    <h1 class="display-4">Kelompok 6</h1>
+    <p class="lead">Student | Program</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" d="M0,64L40,101.3C80,139,160,213,240,218.7C320,224,400,160,480,112C560,64,640,32,720,58.7C800,85,880,171,960,181.3C1040,192,1120,128,1200,112C1280,96,1360,128,1400,144L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+    </svg>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>About me</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center fs-5 text-center">
+        <div class="col-md-4">
+          <p>PPLG adalah singkatan dari Pengembangan Perangkat Lunak dan Gim, yang merupakan salah satu bidang atau jurusan dalam pendidikan vokasional di Indonesia</p>
+        </div>
+        <div class="col-md-4">
+          <p>Jurusan ini fokus pada pembelajaran dan pengembangan keterampilan dalam pembuatan perangkat lunak (software) dan gim (games).</p>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#e2edff" d="M0,192L48,213.3C96,235,192,277,288,261.3C384,245,480,171,576,154.7C672,139,768,181,864,186.7C960,192,1056,160,1152,160C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </section>
+
+  <section id="Anggota">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>Anggota</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 text-center">
+          <div class="card">
+            <img src="Asset/person man.png" class="card-img-top" alt="Ilham Adi Purnomo">
+            <div class="card-body">
+              <p class="card-text">Ilham Adi Purnomo (13)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 text-center">
+          <div class="card">
+            <img src="Asset/person women.png" class="card-img-top" alt="Siti Halima">
+            <div class="card-body">
+              <p class="card-text">Siti Halima (33)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 text-center">
+          <div class="card">
+            <img src="Asset/person women.png" class="card-img-top" alt="Ocha Amelia P.R">
+            <div class="card-body">
+              <p class="card-text">Ocha Amelia P.R (28)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 text-center">
+          <div class="card">
+            <img src="Asset/person man.png" class="card-img-top" alt="Muhammad Rifai">
+            <div class="card-body">
+              <p class="card-text">Muhammad Rifai (23)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3 text-center">
+          <div class="card">
+            <img src="Asset/person man.png" class="card-img-top" alt="Moh Samsul Ma'rif">
+            <div class="card-body">
+              <p class="card-text">Moh Samsul Ma'rif (19)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" d="M0,160L48,149.3C96,139,192,117,288,117.3C384,117,480,139,576,165.3C672,192,768,224,864,202.7C960,181,1056,107,1152,69.3C1248,32,1344,32,1392,32L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,
+
+320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg>
+  </section>
+
+  <section id="Contact">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="kirim.php" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="pesan" class="form-label">Pesan</label>
+              <textarea class="form-control" id="pesan" name="pesan" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-warning text-center p-3">
+    <p>Created by <a href="#" class="text-white fw-bold">Kelompok 6</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+```
+
+#### Kode Proses Kirim Email (Backend)
+File: `kirim.php`
+```php
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $pesan = $_POST['pesan'];
+
+  $to = "emailkelompok6@example.com"; // Ganti dengan email tujuan
+  $subject = "Pesan dari $name";
+  $body = "Nama: $name\nEmail: $email\n\nPesan:\n$pesan";
+  $headers = "From: $email";
+
+  if (mail($to, $subject, $body, $headers)) {
+    echo "<script>alert('Pesan berhasil dikirim');</script>";
+  } else {
+    echo "<script>alert('Pesan gagal dikirim');</script>";
+  }
+}
+?>
+```
+
+### Penjelasan Tambahan
+- **Bootstrap**: Proyek ini menggunakan Bootstrap untuk mempercantik tampilan dan membuatnya responsif.
+- **Email Handling**: Kode PHP di `kirim.php` menghandle pengiriman email dengan menggunakan fungsi `mail()`.
+
+### Cara Menjalankan Proyek
+1. Pastikan server web dengan PHP terinstall di komputer.
+2. Ekstrak semua file ke dalam folder proyek web server (misal: `htdocs` untuk XAMPP).
+3. Buka browser dan akses `localhost/nama_folder_proyek`.
+
+### Struktur Direktori
+```
+- index.php
+- kirim.php
+- style.css
+- /Asset
+  - Logo.jpeg
+  - person man.png
+  - person women.png
+```
+
+Proyek ini adalah contoh sederhana bagaimana membuat sebuah website portofolio dengan HTML, CSS, dan PHP untuk memenuhi tugas sekolah.
+
+### CSS
+CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan dan layout halaman web. Pada proyek ini, CSS digunakan untuk:
+- **Jumbotron Styling**:
+  ```css
+  .jumbotron {
+    padding-top: 2rem;
+    text-align: center;
+    background-color: #e2edff;
+  }
+  ```
+  Mengatur padding, teks, dan background dari bagian jumbotron.
+  
+- **Image Styling**:
+  ```css
+  .img-thumbnail {
+    display: block;
+    margin: 10px auto;
+  }
+  ```
+  Mengatur gambar agar tampil sebagai thumbnail dengan margin otomatis.
+  
+- **Section Styling**:
+  ```css
+  #Anggota {
+    background-color: #e2edff;
+  }
+  ```
+  Mengatur background color untuk bagian anggota.
+
+### JavaScript
+JavaScript digunakan untuk interaksi dinamis pada halaman web. Dalam proyek ini, JavaScript dari Bootstrap digunakan untuk:
+- **Navbar Toggle**:
+  ```html
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  ```
+  Tombol ini menggunakan JavaScript untuk mengaktifkan dan menonaktifkan navbar pada tampilan yang lebih kecil.
+
+### Bootstrap
+Bootstrap adalah framework CSS yang membantu membuat layout web yang responsif dan cepat. Beberapa fungsi Bootstrap yang digunakan:
+- **Grid System**:
+  ```html
+  <div class="container">
+    <div class="row text-center mb-3">
+      <div class="col">
+        <h2>About me</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center fs-5 text-center">
+      <div class="col-md-4">
+        <p>...</p>
+      </div>
+      <div class="col-md-4">
+        <p>...</p>
+      </div>
+    </div>
+  </div>
+  ```
+  Menggunakan sistem grid Bootstrap untuk membuat layout yang responsif.
+  
+- **Cards**:
+  ```html
+  <div class="card">
+    <img src="Asset/person man.png" class="card-img-top" alt="Ilham Adi Purnomo">
+    <div class="card-body">
+      <p class="card-text">Ilham Adi Purnomo (13)</p>
+    </div>
+  </div>
+  ```
+  Menggunakan komponen card untuk menampilkan anggota kelompok.
+
+- **Forms**:
+  ```html
+  <form action="kirim.php" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nama Lengkap</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="pesan" class="form-label">Pesan</label>
+      <textarea class="form-control" id="pesan" name="pesan" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Kirim</button>
+  </form>
+  ```
+  Menggunakan form dan komponen input Bootstrap untuk form kontak.
+
+### HTML
+HTML (HyperText Markup Language) adalah bahasa standar untuk membuat halaman web. Fungsi-fungsi HTML yang digunakan:
+- **Semantics**:
+  ```html
+  <section id="about">
+    <div class="container">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>About me</h2>
+        </div>
+      </div>
+      ...
+    </div>
+  </section>
+  ```
+  Menggunakan elemen `<section>` untuk membagi konten menjadi bagian-bagian yang semantis.
+  
+- **Forms**:
+  ```html
+  <form action="kirim.php" method="POST">
+    ...
+  </form>
+  ```
+  Menggunakan elemen `<form>` untuk membuat form input data.
+  
+- **Images**:
+  ```html
+  <img src="Asset/Logo.jpeg" alt="Logo" width="100" class="rounded-circle img-thumbnail">
+  ```
+  Menampilkan gambar dengan elemen `<img>` dan memberikan styling dengan kelas Bootstrap.
+
+Tentu! Berikut penjelasan mengenai beberapa kelas CSS yang sering digunakan dalam proyek web ini, khususnya dari Bootstrap:
+
+### `.md`
+Kelas ini merupakan bagian dari sistem grid responsif Bootstrap. `md` merujuk pada breakpoint medium (layar dengan lebar ≥ 768px). Kelas ini digunakan untuk menentukan perilaku layout pada layar medium dan lebih besar. Misalnya:
+- `.col-md-4`: Mengatur kolom grid untuk menempati 4 dari 12 bagian pada layar medium ke atas.
+- `.d-md-block`: Menampilkan elemen sebagai blok pada layar medium ke atas.
+  
+### `.mb`
+Kelas ini merupakan singkatan dari "margin-bottom". Kelas ini digunakan untuk menambahkan margin di bawah elemen. Angka setelah `mb` menunjukkan ukuran margin dalam satuan rem. Contohnya:
+- `.mb-3`: Menambahkan margin bawah sebesar 1 rem (sekitar 16px) pada elemen.
+  
+### `.fs`
+Kelas ini merupakan singkatan dari "font-size". Kelas ini digunakan untuk mengatur ukuran font. Angka setelah `fs` menunjukkan ukuran font dalam satuan rem. Contohnya:
+- `.fs-5`: Mengatur ukuran font menjadi 1.25 rem (biasanya 20px).
+
+### `.img-top`
+Kelas ini berasal dari komponen card Bootstrap dan digunakan untuk mengatur tampilan gambar di bagian atas kartu. Kelas ini memastikan gambar ditampilkan penuh di bagian atas card tanpa batasan margin atau padding khusus. Contohnya:
+- `.card-img-top`: Menampilkan gambar di bagian atas card dengan gaya default card Bootstrap.
+
+### Contoh Penggunaan dalam HTML
+Berikut contoh bagaimana kelas-kelas ini digunakan dalam HTML:
+
+```html
+<div class="container">
+  <div class="row text-center mb-3">
+    <div class="col">
+      <h2 class="fs-5">About Me</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center fs-5 text-center">
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <img src="image.jpg" class="card-img-top" alt="Profile Picture">
+        <div class="card-body">
+          <p class="card-text">This is some text inside a card body.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Penjelasan:
+- `.container`: Membuat kontainer yang berpusat dan memiliki padding default.
+- `.row`: Mengatur elemen anak sebagai baris dalam grid.
+- `.text-center`: Mengatur teks menjadi rata tengah.
+- `.mb-3`: Menambahkan margin bawah sebesar 1 rem (16px).
+- `.col`: Mengatur kolom dalam grid.
+- `.fs-5`: Mengatur ukuran font menjadi 1.25 rem (20px).
+- `.col-md-4`: Mengatur kolom untuk menempati 4 dari 12 bagian pada layar medium ke atas.
+- `.justify-content-center`: Menyusun elemen anak dengan alignment center secara horizontal.
+- `.card`: Mengatur elemen sebagai card Bootstrap.
+- `.card-img-top`: Menampilkan gambar di bagian atas card dengan gaya default.
+- `.card-body`: Mengatur isi card.
+- `.card-text`: Mengatur teks dalam card.
+
+Dengan memahami penggunaan kelas-kelas ini, Anda dapat lebih mudah membangun halaman web yang responsif dan tampak profesional dengan Bootstrap.
